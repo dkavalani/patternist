@@ -16,13 +16,21 @@
 		// (notice the different style of comments)
 
 		// here is where you declare your vars, like:
-		// var one = 1;
+		var row = 1;
+		var max_rows = 18;
+		var output = '';
+    var elementTag = "h1";
+		var position = '';
+		
+
+
 
 	 /**
 	 * Setup - this is where you get things ready before running the loop
 	 */
 		function setup() {
-			// this tells p5 that we are not using the
+
+// this tells p5 that we are not using the
 			// `<canvas>` element (more on that later)
 			noCanvas();
 		}
@@ -30,9 +38,74 @@
 		/**
 		 * Here's the draw loop! This is where all the fun stuff happens.
 		 */
+
+
 		function draw() {
-			// this will continue to loop
+			if (row < max_rows)
+
+
+			{ if (row ==1) {
+				output = " &#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;"
+			} else if (row ==2) {
+				output = "&nbsp;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;";
+				position = "right"
+			} else if (row == 3) {
+				output = "&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&nbsp;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9631;";
+		} else if (row == 4) {
+				output = "&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;";
+			} else if (row ===5) {
+				output =" &#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;";
+				position = "right"
+}       else if (row ==6) {
+	      output ="&nbsp;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;"
+
+} else if (row == 7) {
+	output = "&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&nbsp;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9631;"
+	position = "right"
+} else if (row == 8) {
+	output = "&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;";
+} else if (row == 9) {
+	output = " &#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;"
+} else if (row == 10) {
+	output = "&nbsp;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;";
+	position = "right"
+} else if (row ==11) {
+	output = "&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&nbsp;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9631;";
+}else if (row == 12) {
+	output = "&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;";
+} else if (row == 13) {
+	output = " &#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;";
+	position = "right"
+} else if (row == 14) {
+	output = "&nbsp;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;"
+} else if (row == 15) {
+	output = "&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9627;&nbsp;&#9631;&nbsp;&#9627;&#9631;&nbsp;&#9631;"
+	position = "right"
+} else if (row == 16) {
+	output = "&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;&#9617;";
+} else if (rpw == 17) {
+	output = " &#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;&#10066;"
+} else if (row == 18) {
+	output = "&nbsp;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;&#9725;";
+	position = "right"
+}
+
+
+
+	var element = createElement(elementTag,output);
+			row = row + 1;
+			element.addClass(position);
+			position = "";
 		}
+	}
+			// this will continue to loop
+
+
+
+
+	//we want to programmatically
+	//add one of the rows of 100 characters
+
 
 		// now leaving the land of javascript...
 		</script>
@@ -40,10 +113,30 @@
 
 		<style>
 			body {
-				padding: 0;
-				margin: 0;
+				padding:0;
+				margin: 100px 100px 100px 100px;
 				font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 				font-size: 200%;
+				background:#FF6699;
+				color: #330099;
+				border-style: dotted;
+				line-height: 1.2em;
+
+			}
+
+}
+			h1 {
+				font-weight: bold;
+				font-family: 'Georgia', sans-serif;
+			}
+
+			.right {
+				text-align: right;
+			}
+
+			}
+			.center {
+				text-align: center;
 			}
 		</style>
 
@@ -55,3 +148,6 @@
 	</body>
 
 </html>
+
+
+
